@@ -1,6 +1,6 @@
 <template>
   <div class="page-home">
-          <section class="go-top font-20">
+    <section class="go-top font-20">
       <div class="icon-arrow-up"></div>
     </section>
 
@@ -15,12 +15,30 @@
         <div class="header-search"></div>
       </a>
     </header>
+    <Swiper :autoplay = "2000" >
+      <SwipeItem>1</SwipeItem>
+      <SwipeItem>2</SwipeItem>
+      <SwipeItem>3</SwipeItem>
+      <SwipeItem>4</SwipeItem>
+    </Swiper>
+    <Swiper :autoplay = "2000" >
+      <SwipeItem>1</SwipeItem>
+      <SwipeItem>2</SwipeItem>
+      <SwipeItem>3</SwipeItem>
+      <SwipeItem>4</SwipeItem>
+    </Swiper>
   </div>
 </template>
 
 <script>
+import { Swiper, SwipeItem } from '@/components/Swiper'
+
 export default {
-  name: 'Home'
+  name: 'Home',
+  components: {
+    Swiper,
+    SwipeItem
+  }
 }
 </script>
 
@@ -32,23 +50,23 @@ export default {
     align-items: center;
     padding: 0 20px;
     box-sizing: border-box;
-    .user-btn{
-      width: 25px;
-      height: 25px;
-      background: url(~@/assets/icon/user-btn.png);
-      background-size: 100%;
-    }
-    .header-logo{
-      width: 92px;
-      height: 28px;
-      background: url(~@/assets/logo.png) no-repeat;
-      background-size: 100%;
-    }
-    .header-search{
-      width: 25px;
-      height: 25px;
-      background: url(~@/assets/icon/search.png) no-repeat;
-      background-size: 100%;
-    }
+  }
+  .user-btn{
+    width: 25px;
+    height: 25px;
+    background: url(~@/assets/icon/user-btn.png);
+    background-size: 100%;
+  }
+  .header-logo{
+    width: 92px;
+    height: 28px;
+    background: url(~@/assets/logo.png) no-repeat;
+    background-size: 100%;
+  }
+  .header-search{
+    width: 25px;
+    height: 25px;
+    background: url(~@/assets/icon/search.png) no-repeat;
+    background-size: 100%;
   }
 </style>
