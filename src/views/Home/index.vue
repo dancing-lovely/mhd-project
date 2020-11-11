@@ -32,24 +32,45 @@
 
 <script>
 import { Swiper, SwipeItem } from '@/components/Swiper'
-
+import { getBanner } from '@/api/cartoon'
 export default {
   name: 'Home',
   components: {
     Swiper,
     SwipeItem
+  },
+  created () {
+    getBanner().then(res => { console.log(res) })
   }
 }
 </script>
 
 <style lang="scss" scoped>
+@import "~@/assets/style/mixins.scss";
+// .page-home{
+//   display: flex;
+//   height: 100%;
+//   flex-direction: column;
+// }
   .index-header{
+    @include border-bottom;
+    position: relative;
     display: flex;
     height: 44px;
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
     box-sizing: border-box;
+    // &::after{
+    //   content: '';
+    //   position: absolute;
+    //   width: 100%;
+    //   height: 1px;
+    //   bottom: 0;
+    //   left: 0;
+    //   border-bottom: 1px solid #ededed;
+    //   transform: scaleY(.5);
+    // }
   }
   .user-btn{
     width: 25px;
