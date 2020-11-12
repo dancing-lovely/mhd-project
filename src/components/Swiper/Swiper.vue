@@ -43,9 +43,6 @@ export default {
 </script>
 
 <style lang="scss">
-    body{
-    background: #ccc;
-    }
     .swiper-pagination-bullet {
         opacity: 1;
         vertical-align: middle;
