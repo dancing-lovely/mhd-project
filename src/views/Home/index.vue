@@ -3,6 +3,7 @@
     <section class="go-top font-20">
       <div class="icon-arrow-up"></div>
     </section>
+
     <index-header></index-header>
     <indexNav></indexNav>
     <div class = "index-main">

@@ -6,15 +6,18 @@
         </div>
       </a>
       <div class="header-logo"></div>
-      <a href="search.html?cpid=0">
-        <div class="header-search"></div>
-      </a>
+      <div class="header-search" @click = "goSearch"></div>
     </header>
 </template>
 
 <script>
 export default {
-  name: 'indexHeader'
+  name: 'indexHeader',
+  methods: {
+    goSearch () {
+      this.$router.push('/search')
+    }
+  }
 }
 </script>
 
